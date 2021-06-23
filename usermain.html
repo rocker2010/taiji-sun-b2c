@@ -1,0 +1,279 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+<link href="css/weui.min.css" rel="stylesheet" type="text/css" />
+<link href="css/nav/jquery-accordion-menu.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/skin.css">
+<script src="css/js/jquery-1.11.2.min.js" type="text/javascript"></script>
+<script src="css/js/jquery-accordion-menu.js" type="text/javascript"></script>
+<script src="css/js/jquery.scrollUp.min.js"></script>
+<script type="text/javascript">
+<!--
+var _edit = 
+{
+ IN: function (obj, act, id) {
+  var tag = obj.firstChild.tagName;
+  if (typeof(tag) != "undefined" && (tag == "INPUT" || tag == "TEXTAREA"))return;
+  var org = obj.innerHTML;
+  var orglen = org.replace(/[^\x00-\xff]/g,'**').length;
+  if (obj.offsetHeight <= 22) {
+  var val = window.ActiveXObject ? obj.innerText : obj.textContent;
+  var txt = document.createElement("INPUT");
+  txt.value = val;
+  txt.style.background = "#FFC";
+  txt.style.width = obj.offsetWidth + "px" ;
+  obj.innerHTML = "";
+  obj.appendChild(txt);
+  txt.focus();
+  txt.onblur = function(e){
+obj.innerHTML = txt.value;
+_edit.QUERY(act,txt.value);
+return false;
+  }
+  return false;
+  }else{
+var content = obj.innerHTML;
+var html = document.createElement('TEXTAREA');
+html.style.width = obj.offsetWidth + "px";
+html.style.height = obj.offsetHeight + "px";
+obj.innerHTML = "";
+html.value = content;
+obj.appendChild(html);
+html.focus();
+html.onblur = function(e){
+obj.innerHTML = html.value;
+_edit.QUERY(act,obj.innerHTML);
+}
+return false;
+  }
+
+ },
+ QUERY: function (url,postData) {
+var req = (window.XMLHttpRequest) ? new XMLHttpRequest() : (window.ActiveXObject ? new ActiveXObject('Microsoft.XMLHTTP') : false);
+if (!req) alert("Unable to creat an XMLHttpRequest");
+var method = (postData) ? "POST" : "GET";
+req.open(method,url,true);
+if (postData)req.setRequestHeader('Content-type','application/x-www-form-urlencoded');
+req.onreadystatechange = function () {
+if (req.readyState == 4) {
+if(req.status == 200) {
+var message = req.responseText;
+if(message)alert(message);
+}else{
+alert("恭喜您修改成功" + req.status);
+}
+}
+}
+req.send(postData);
+ }
+}
+
+var editContent = _edit.IN;
+// -->
+</script>
+<title>会员中心</title>
+</head>
+<body>
+<div class="nav">
+  <div id="jquery-accordion-menu" class="jquery-accordion-menu blue"> 
+    <!--<div class="jquery-accordion-menu-header" id="form"></div>-->
+    <ul id="nav-list">
+      <li class="active"><a href="main.html"><i class="fa fa-home"></i>返回首页</a></li>
+      <li><a href="about.html"><i class="fa fa-glass"></i>关于泰济生</a></li>
+      <li><a href="usermain.html"><i class="fa fa-file-image-o"></i>我的健康管理</a></li>
+      <li><a href="#"><i class="fa fa-cog"></i>基因检测</a>
+        <ul class="submenu">
+          <li><a href="aandq.html">易感基因问与答</a></li>
+          <li><a href="genzong.html">基因检测跟踪</a></li>
+          <li><a href="reports.html">查看检测报告</a></li>
+          <li><a href="input.html">录入检测信息</a></li>
+        </ul>
+      </li>
+      <li><a href="#"><i class="fa fa-user"></i>预约挂号</a>
+        <ul class="submenu">
+          <li><a href="yuyuegh.html">马上预约</a></li>
+          <li><a href="zyy.html">找医院</a></li>
+          <li><a href="zys.html">找医生</a></li>
+          <li><a href="zxm.html">找项目</a></li>
+        </ul>
+      </li>
+      <li><a href="#"><i class="fa fa-user"></i>养生馆</a>
+        <ul class="submenu">
+          <li><a href="yangshengguandaigou.html">养生馆代购</a></li>
+          <li><a href="daigoudingdanList.html">代购订单管理</a></li>
+        </ul>
+      </li>
+      <li><a href="usermain.html"><i class="fa fa-user"></i>个人中心 </a>
+        <ul class="submenu">
+          <li><a href="usermain.html">个人中心</a></li>
+          <li><a href="jilu.html">个人交易记录</a></li>
+          <li><a href="yeji.html">我的业绩记录</a></li>
+          <li><a href="usermain.html">个人中心</a></li>
+          <li><a href="jilu.html">个人交易记录</a></li>
+          <li><a href="yeji.html">我的业绩记录</a></li>
+          <li><a href="usermain.html">个人中心</a></li>
+          <li><a href="jilu.html">个人交易记录</a></li>
+          <li><a href="yeji.html">我的业绩记录</a></li>
+          <li><a href="usermain.html">个人中心</a></li>
+          <li><a href="jilu.html">个人交易记录</a></li>
+          <li><a href="yeji.html">我的业绩记录</a></li>
+          <li><a href="yuyue.html">我的预约记录</a></li>
+          <li><a href="yeji.html">我的业绩记录</a></li>
+        </ul>
+      </li>
+    </ul>
+    <!--<div class="jquery-accordion-menu-footer">
+			Footer
+		</div>--> 
+  </div>
+</div>
+<div class="header"> <a href="javascript:" data-rel="menu" class="iconfont menu"><span class="f12">主菜单</span></a> <!--<a href="javascript:history.go(-1)" class="iconfont back" style="right:0"></a>-->
+  <h1>个人中心</h1>
+</div>
+<div class="content btm0">
+	<div class="newsList hd cwh">
+      <div class="useImg ma"><img src="images/user.jpg" alt=""></div><p class="tc mt5">就疯狂的就</p>
+    </div>
+  <div class="p15">
+    <div class="weui_cells weui_cells_form">
+      <p class="f12 lh24 p10"><i class="note cb ml5"></i>单击内容可以编辑。</p>
+      <div class="weui_cell">
+        <div class="weui_cell_hd">
+          <label class="weui_label ">昵称</label>
+        </div>
+        <div class="weui_cell_bd weui_cell_primary">
+          <div onClick="_edit.IN(this,'index.html?act=edit',3)">蒂凡尼</div>
+        </div>
+      </div>
+      <div class="weui_cell">
+        <div class="weui_cell_hd">
+          <label for="" class="weui_label">手机号</label>
+        </div>
+        <div class="weui_cell_bd weui_cell_primary">
+          <div onClick="_edit.IN(this,'index.html?act=edit',3)">13925164578</div>
+        </div>
+        <div class="weui_cell_ft"> <i class="weui_icon_warn"></i></div>
+      </div>
+      <div class="weui_cell">
+        <div class="weui_cell_hd">
+          <label for="" class="weui_label">邮箱</label>
+        </div>
+        <div class="weui_cell_bd weui_cell_primary">
+          <div onClick="_edit.IN(this,'index.html?act=edit',3)">kjkjk@sohu.com</div>
+        </div>
+      </div>
+      <div class="weui_cell">
+        <div class="weui_cell_hd">
+          <label for="" class="weui_label">证件号码</label>
+        </div>
+        <div class="weui_cell_bd weui_cell_primary">
+          <div onClick="_edit.IN(this,'index.html?act=edit',3)">1254784512</div>
+        </div>
+        <div class="weui_cell_ft"> <i class="weui_icon_warn"></i></div>
+      </div>
+      <hr>
+      <div class="weui_cell">
+        <div class="weui_cell_hd">
+          <label for="" class="weui_label">会员级别</label>
+        </div>
+        <div class="weui_cell_bd weui_cell_primary"> <b class="cgr">8</b> </div>
+      </div>
+      <div class="weui_cell">
+        <div class="weui_cell_hd">
+          <label for="" class="weui_label">会员卡号</label>
+        </div>
+        <div class="weui_cell_bd weui_cell_primary"> 8 </div>
+      </div>
+      <div class="weui_cell">
+        <div class="weui_cell_hd">
+          <label for="" class="weui_label">赠送金额</label>
+        </div>
+        <div class="weui_cell_bd weui_cell_primary"> <b class="cr">800.5</b> </div>
+      </div>
+      <div class="weui_cell">
+        <div class="weui_cell_hd">
+          <label for="" class="weui_label">现金余额</label>
+        </div>
+        <div class="weui_cell_bd weui_cell_primary"> <b class="cr">88541,21</b> </div>
+      </div>
+    </div>
+    <hr>
+    <div class="weui_cells_title">其他服务权益：</div>
+    <div class="weui_cells_title b">现金活动卡</div>
+    <div class="js_container">
+      <div class="cardBox" id="showDialog2">
+        <div class="cardBoxL"><b class="f14">￥</b><span>20.5</span></div>
+        <div class="cardBoxR">
+          <h1>对将开放数据库电视了</h1>
+          已用<span class="fa">￥<b>10.0</b></span>剩余<span class="fa">￥<b>10.5</b></span></div>
+        <div class="yxq">有效期：2015-12-31 前使用</div>
+      </div>
+      <div class="cardBox used">
+        <div class="cardBoxL"><b class="f14">￥</b><span>20.5</span></div>
+        <div class="cardBoxR">
+          <h1>对将开放数据库电视了</h1>
+          已用<span class="fa">￥<b>10.0</b></span>剩余<span class="fa">￥<b>10.5</b></span></div>
+        <div class="yxq">有效期：2015-12-31 前使用</div>
+      </div>
+      <div class="cardBox">
+        <div class="cardBoxL"><b class="f14">￥</b><span>20.5</span></div>
+        <div class="cardBoxR">
+          <h1>对将开放数据库电视了</h1>
+          已用<span class="fa">￥<b>10.0</b></span>剩余<span class="fa">￥<b>10.5</b></span></div>
+        <div class="yxq">有效期：2015-12-31 前使用</div>
+      </div>
+      <div class="weui_cells_title b">项目次卡</div>
+      <div class="cardBox">
+        <div class="cardBoxL"><b class="f14">共</b><span>5</span><b class="f14">次</b></div>
+        <div class="cardBoxR">
+          <h1>对将开放数据库电视了</h1>
+          已用<span class="fa"><b>3</b>次</span>剩余<span class="fa"><b>2</b>次</span></div>
+        <div class="yxq">有效期：2015-12-31 前使用</div>
+      </div>
+      <div class="cardBox">
+        <div class="cardBoxL"><b class="f14">共</b><span>5</span><b class="f14">次</b></div>
+        <div class="cardBoxR">
+          <h1>对将开放数据库电视了</h1>
+          已用<span class="fa"><b>3</b>次</span>剩余<span class="fa"><b>2</b>次</span></div>
+        <div class="yxq">有效期：2015-12-31 前使用</div>
+      </div>
+      <div class="cardBox used">
+        <div class="cardBoxL"><b class="f14">共</b><span>5</span><b class="f14">次</b></div>
+        <div class="cardBoxR">
+          <h1>对将开放数据库电视了</h1>
+          已用<span class="fa"><b>3</b>次</span>剩余<span class="fa"><b>2</b>次</span></div>
+        <div class="yxq">有效期：2015-12-31 前使用</div>
+      </div>
+      <div class="cardBox">
+        <div class="cardBoxL"><b class="f14">共</b><span>5</span><b class="f14">次</b></div>
+        <div class="cardBoxR">
+          <h1>对将开放数据库电视了</h1>
+          已用<span class="fa"><b>3</b>次</span>剩余<span class="fa"><b>2</b>次</span></div>
+        <div class="yxq">有效期：2015-12-31 前使用</div>
+      </div>
+      <div class="mt20">
+        <input name="" type="submit" value="加载更多" class="weui_btn weui_btn_default" onClick="location='quanyi.html'">
+      </div>
+    </div>
+  </div>
+</div>
+<!--二维码弹出窗口-->
+<div class="weui_dialog_alert" id="dialog2" style="display: none;">
+  <div class="weui_mask"></div>
+  <div class="weui_dialog">
+    <div class="weui_dialog_hd"><strong class="weui_dialog_title">条形码</strong></div>
+    <div class="weui_dialog_bd"><img src="images/txm.jpg" alt="" class="pct100"><p class="tc">21547845211222</p></div>
+    <div class="weui_dialog_ft"> <a href="javascript:;" class="weui_btn_dialog primary">关闭</a> </div>
+  </div>
+</div>
+<footer class="tc footer infooter">Copyright (c) 2015 taijisun.com. All Rights Reserved</footer>
+<script src="css/js/js.js"></script> 
+<script src="css/fastclick.js"></script> 
+<script>
+FastClick.attach(document.body);
+</script>
+</body>
+</html>

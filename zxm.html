@@ -1,0 +1,451 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+		<link href="css/nav/jquery-accordion-menu.css" rel="stylesheet" type="text/css" />
+		<link href="css/weui.min.css" rel="stylesheet" type="text/css" />
+		<script src="css/js/jquery-1.11.2.min.js" type="text/javascript"></script>
+		<script src="css/js/jquery-accordion-menu.js" type="text/javascript"></script>
+		<script src="css/js/jquery.scrollUp.min.js"></script>
+		<title>找医院</title>
+		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/skin.css">
+	</head>
+
+	<body>
+		<div class="nav">
+			<div id="jquery-accordion-menu" class="jquery-accordion-menu blue">
+				<!--<div class="jquery-accordion-menu-header" id="form"></div>-->
+				<ul id="nav-list">
+					<li class="active">
+						<a href="main.html"><i class="fa fa-home"></i>返回首页</a>
+					</li>
+					<li>
+						<a href="about.html"><i class="fa fa-glass"></i>关于泰济生</a>
+					</li>
+					<li>
+						<a href="usermain.html"><i class="fa fa-file-image-o"></i>我的健康管理</a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-cog"></i>基因检测</a>
+						<ul class="submenu">
+							<li>
+								<a href="aandq.html">易感基因问与答</a>
+							</li>
+							<li>
+								<a href="genzong.html">基因检测跟踪</a>
+							</li>
+							<li>
+								<a href="reports.html">查看检测报告</a>
+							</li>
+							<li>
+								<a href="input.html">录入检测信息</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-user"></i>预约挂号</a>
+						<ul class="submenu">
+							<li>
+								<a href="yuyuegh.html">马上预约</a>
+							</li>
+							<li>
+								<a href="zyy.html">找医院</a>
+							</li>
+							<li>
+								<a href="zys.html">找医生</a>
+							</li>
+							<li>
+								<a href="zxm.html">找项目</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-user"></i>养生馆</a>
+						<ul class="submenu">
+							<li>
+								<a href="yangshengguandaigou.html">养生馆代购</a>
+							</li>
+							<li>
+								<a href="daigoudingdanList.html">代购订单管理</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="usermain.html"><i class="fa fa-user"></i>个人中心 </a>
+						<ul class="submenu">
+							<li>个人中心</li>
+							<li>个人交易记录</li>
+							<li>个人中心</li>
+							<li>个人交易记录</li>
+							<li>个人中心</li>
+							<li>个人交易记录</li>
+							<li>个人中心</li>
+							<li>个人交易记录</li>
+						</ul>
+					</li>
+					<li>
+						<a href="yuyue.html"><i class="fa fa-user"></i>我的预约记录</a>
+					</li>
+				</ul>
+				<!--<div class="jquery-accordion-menu-footer">
+			Footer
+		</div>-->
+			</div>
+		</div>
+		<div class="header">
+			<a href="javascript:" data-rel="menu" class="iconfont menu"><span class="f12">主菜单</span></a>
+			<a href="javascript:history.go(-1)" class="iconfont back" style="right:0"></a>
+			<h1>找项目</h1>
+		</div>
+		<div class="content bgef js_container">
+			<div class="weui_cells_form">
+				<div class="weui_cell weui_cell_select weui_select_before search pb0">
+					<!--<div class="weui_cell_hd"> <a href="javascript:;" class="" id="showDialog1" style="padding-right:20px;">天津</a> </div>-->
+					<div class="weui_cell_bd weui_cell_primary" style="padding-left:0;">
+						<input class="weui_input" type="text" placeholder="输入项目名称">
+					</div>
+					<div class="weui_cell_ft">
+						<a href="search_zys.html" class="weui_btn weui_btn_mini weui_btn_primary">查询</a>
+					</div>
+				</div>
+				<!--<div class="weui_cell weui_cell_select bgwh">
+      <div class="weui_cell_bd weui_cell_primary">
+        <select class="weui_select" name="select2">
+          <option value="1">泰济生医院天津总部</option>
+          <option value="2">泰济生医院滨海分部</option>
+          <option value="3">泰济生医院万达分部</option>
+        </select>
+      </div>
+    </div>-->
+				<div class="itemList" id="zys">
+					<ul>
+						<li class="active pct30">
+							<a href="#">全部项目</a>
+						</li>
+						<li class="pct30">
+							<a href="#">男宾体检</a>
+						</li>
+						<li class="pct30">
+							<a href="#">女宾体检</a>
+						</li>
+						<li class="pct30">
+							<a href="#">特色项目</a>
+						</li>
+						<li class="pct30">
+							<a href="#">男宾团检</a>
+						</li>
+						<li class="pct30">
+							<a href="#">女宾团检</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--<div class="weui_dialog_confirm" id="dialog1" style="display: none;">
+    <div class="weui_mask"></div>
+    <div class="weui_dialog bgef">
+      <div class="weui_dialog_hd"><strong class="weui_dialog_title">选择城市</strong></div>
+      <div class="weui_dialog_bd selCity">
+        <h1>热门城市</h1>
+        <h2>当前城市：<span>天津</span></h2>
+        <ul>
+          <li><a href="#">上海</a></li>
+          <li><a href="#">北京</a></li>
+          <li><a href="#">深圳</a></li>
+          <li><a href="#">重庆</a></li>
+          <li><a href="#">广州</a></li>
+          <li><a href="#">成都</a></li>
+          <li><a href="#">东莞</a></li>
+          <li><a href="#">杭州</a></li>
+          <li><a href="#">武汉</a></li>
+          <li><a href="#">天津</a></li>
+          <li><a href="#">西安</a></li>
+          <li><a href="#">佛山</a></li>
+        </ul>
+      </div>
+     <h2 class="f14 mt10 mb5">A</h2>
+      <div class="weui_dialog_bd selCity">
+        <ul>
+          <li><a href="#">上海</a></li>
+          <li><a href="#">北京</a></li>
+          <li><a href="#">深圳</a></li>
+          <li><a href="#">重庆</a></li>
+          <li><a href="#">广州</a></li>
+          <li><a href="#">成都</a></li>
+          <li><a href="#">东莞</a></li>
+          <li><a href="#">杭州</a></li>
+          <li><a href="#">武汉</a></li>
+          <li><a href="#">天津</a></li>
+          <li><a href="#">西安</a></li>
+          <li><a href="#">佛山</a></li>
+        </ul>
+      </div>
+      <h2 class="f14 mt10 mb5">B</h2>
+      <div class="weui_dialog_bd selCity">
+        <ul>
+          <li><a href="#">上海</a></li>
+          <li><a href="#">北京</a></li>
+          <li><a href="#">深圳</a></li>
+          <li><a href="#">重庆</a></li>
+          <li><a href="#">广州</a></li>
+          <li><a href="#">成都</a></li>
+          <li><a href="#">东莞</a></li>
+          <li><a href="#">杭州</a></li>
+          <li><a href="#">武汉</a></li>
+          <li><a href="#">天津</a></li>
+          <li><a href="#">西安</a></li>
+          <li><a href="#">佛山</a></li>
+        </ul>
+      </div>
+      <h2 class="f14 mt10 mb5">C</h2>
+      <div class="weui_dialog_bd selCity">
+        <ul>
+          <li><a href="#">上海</a></li>
+          <li><a href="#">北京</a></li>
+          <li><a href="#">深圳</a></li>
+          <li><a href="#">重庆</a></li>
+          <li><a href="#">广州</a></li>
+          <li><a href="#">成都</a></li>
+          <li><a href="#">东莞</a></li>
+          <li><a href="#">杭州</a></li>
+          <li><a href="#">武汉</a></li>
+          <li><a href="#">天津</a></li>
+          <li><a href="#">西安</a></li>
+          <li><a href="#">佛山</a></li>
+        </ul>
+      </div>
+      <div class="weui_dialog_ft"> <a href="javascript:;" class="weui_btn_dialog default">取消</a> </div>
+    </div>
+  </div>-->
+			<div class="jinduList">
+				<div class="jinduT" style="width: 20%;">20</div>
+				<div class="jinduBox"><span class="fl">0</span> <span class="fr">28</span></div>
+			</div>
+			<style type="text/css">
+				.jinduList {
+					background: #a3d6fd;
+					margin-bottom: 25px;
+					height: 30px;
+					line-height: 30px;
+					position: relative;
+				}
+				
+				.jinduBox {
+					padding: 5px;
+					position: absolute;
+					width: 100%;
+					overflow: hidden;
+					line-height: 13px;
+					font-size: 12px;
+					box-sizing: border-box;
+					margin-top: 1px;
+				}
+				
+				.jinduList .jinduT {
+					background: #55acef;
+					text-align: right;
+					padding: 0 10px;
+					box-sizing: border-box;
+					color: #fff;
+					width: 0;
+					-webkit-transition: all .25s linear;
+					 -moz-transition: all .25s linear;
+	  			 -o-transition: all .25s linear;
+        		transition: all .25s linear;
+				}
+			</style>
+
+			<ul class="newsList">
+				<li>
+					<a href="xm_view.html" class="docList">
+						<div class="ovh">
+							<h1 class="title2">钻石套餐（男宾体检全项体检套餐）</h1>
+							<p><span class="b">泰济生医院天津总部</span></p>
+							<p><b>标签：</b>肾功能衰竭 肾病 肾炎 肾病综…</p>
+							<p>的开发接口的斯洛克费劲了，就疯狂的洛杉矶阿飞了，发动机是卡拉飞将代理商及，发电机卡酸辣粉就。</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="xm_view.html" class="docList">
+						<div class="ovh">
+							<h1 class="title2">钻石套餐（男宾体检全项体检套餐）</h1>
+							<p><span class="b">泰济生医院天津总部</span></p>
+							<p><b>标签：</b>肾功能衰竭 肾病 肾炎 肾病综…</p>
+							<p>的开发接口的斯洛克费劲了，就疯狂的洛杉矶阿飞了，发动机是卡拉飞将代理商及，发电机卡酸辣粉就。</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="xm_view.html" class="docList">
+						<div class="ovh">
+							<h1 class="title2">钻石套餐（男宾体检全项体检套餐）</h1>
+							<p><span class="b">泰济生医院天津总部</span></p>
+							<p><b>标签：</b>肾功能衰竭 肾病 肾炎 肾病综…</p>
+							<p>的开发接口的斯洛克费劲了，就疯狂的洛杉矶阿飞了，发动机是卡拉飞将代理商及，发电机卡酸辣粉就。</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="xm_view.html" class="docList">
+						<div class="ovh">
+							<h1 class="title2">钻石套餐（男宾体检全项体检套餐）</h1>
+							<p><span class="b">泰济生医院天津总部</span></p>
+							<p><b>标签：</b>肾功能衰竭 肾病 肾炎 肾病综…</p>
+							<p>的开发接口的斯洛克费劲了，就疯狂的洛杉矶阿飞了，发动机是卡拉飞将代理商及，发电机卡酸辣粉就。</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="xm_view.html" class="docList">
+						<div class="ovh">
+							<h1 class="title2">钻石套餐（男宾体检全项体检套餐）</h1>
+							<p><span class="b">泰济生医院天津总部</span></p>
+							<p><b>标签：</b>肾功能衰竭 肾病 肾炎 肾病综…</p>
+							<p>的开发接口的斯洛克费劲了，就疯狂的洛杉矶阿飞了，发动机是卡拉飞将代理商及，发电机卡酸辣粉就。</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="xm_view.html" class="docList">
+						<div class="ovh">
+							<h1 class="title2">钻石套餐（男宾体检全项体检套餐）</h1>
+							<p><span class="b">泰济生医院天津总部</span></p>
+							<p><b>标签：</b>肾功能衰竭 肾病 肾炎 肾病综…</p>
+							<p>的开发接口的斯洛克费劲了，就疯狂的洛杉矶阿飞了，发动机是卡拉飞将代理商及，发电机卡酸辣粉就。</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="xm_view.html" class="docList">
+						<div class="ovh">
+							<h1 class="title2">钻石套餐（男宾体检全项体检套餐）</h1>
+							<p><span class="b">泰济生医院天津总部</span></p>
+							<p><b>标签：</b>肾功能衰竭 肾病 肾炎 肾病综…</p>
+							<p>的开发接口的斯洛克费劲了，就疯狂的洛杉矶阿飞了，发动机是卡拉飞将代理商及，发电机卡酸辣粉就。</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="xm_view.html" class="docList">
+						<div class="ovh">
+							<h1 class="title2">钻石套餐（男宾体检全项体检套餐）</h1>
+							<p><span class="b">泰济生医院天津总部</span></p>
+							<p><b>标签：</b>肾功能衰竭 肾病 肾炎 肾病综…</p>
+							<p>的开发接口的斯洛克费劲了，就疯狂的洛杉矶阿飞了，发动机是卡拉飞将代理商及，发电机卡酸辣粉就。</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="xm_view.html" class="docList">
+						<div class="ovh">
+							<h1 class="title2">钻石套餐（男宾体检全项体检套餐）</h1>
+							<p><span class="b">泰济生医院天津总部</span></p>
+							<p><b>标签：</b>肾功能衰竭 肾病 肾炎 肾病综…</p>
+							<p>的开发接口的斯洛克费劲了，就疯狂的洛杉矶阿飞了，发动机是卡拉飞将代理商及，发电机卡酸辣粉就。</p>
+						</div>
+					</a>
+				</li>
+			</ul>
+
+			<!--这就是步骤的格式-->
+			<ul class="stepList">
+				<li class="act">
+					<a href="#">选项1</a>
+				</li>
+				<li class="act">
+					<a href="#">选项2</a>
+				</li>
+				<li>
+					<a href="#">选项3</a>
+				</li>
+				<li>
+					<a href="#">选项4</a>
+				</li>
+			</ul>
+			<style type="text/css">
+				.stepList {
+					background: #fff;
+					display: flex;
+					margin-bottom: 20px;
+					margin-top: 10px;
+				}
+				
+				.stepList li {
+					display: inline-block;
+					flex: 1;
+					text-align: center;
+					border-right: 1px #c9c9c9 solid;
+					padding: 5px 5px 5px 0;
+					position: relative;
+				}
+				
+				.stepList .act {
+					background: #55acef;
+					color: #fff;
+					border-right: 1px #fff solid;
+				}
+				
+				.stepList a {}
+				
+				.stepList .act a {}
+				
+				.stepList li:last-child {
+					border-right: none
+				}
+				
+				.stepList li:before {
+					content: "";
+					border-style: solid;
+					border-width: 8px;
+					border-color: transparent transparent transparent #c9c9c9;
+					position: absolute;
+					right: -17px;
+					top: 11px;
+				}
+				
+				.stepList .act:before {
+					content: "";
+					border-style: solid;
+					border-width: 8px;
+					border-color: transparent transparent transparent #fff;
+					position: absolute;
+					right: -16px;
+					top: 11px;
+					z-index: 1;
+				}
+				
+				.stepList li:after {
+					content: "";
+					border-style: solid;
+					border-width: 8px;
+					border-color: transparent transparent transparent #fff;
+					position: absolute;
+					right: -15px;
+					top: 11px;
+				}
+				
+				.stepList .act:after {
+					content: "";
+					border-style: solid;
+					border-width: 8px;
+					border-color: transparent transparent transparent #55acef;
+					position: absolute;
+					right: -15px;
+					top: 11px;
+					z-index: 2;
+				}
+			</style>
+			<!--结束步骤的格式-->
+		</div>
+		<footer class="tc footer infooter">Copyright (c) 2015 taijisun.com. All Rights Reserved</footer>
+		<script src="css/js/js.js"></script>
+		<script src="css/fastclick.js"></script>
+		<script>
+			FastClick.attach(document.body);
+		</script>
+	</body>
+
+</html>

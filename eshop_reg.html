@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+<link href="css/nav/jquery-accordion-menu.css" rel="stylesheet" type="text/css" />
+
+<script src="css/js/jquery-1.11.2.min.js" type="text/javascript"></script>
+<script src="css/js/jquery-accordion-menu.js" type="text/javascript"></script>
+
+<title>经销商移动工作室申请</title>
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/skin.css">
+</head>
+
+<body>
+<div class="page">
+  <div class="header"> <a href="#pageHome" data-rel="back" class="iconfont back"></a></a>
+    <h1>经销商移动工作室申请</h1>
+  </div>
+  <div class="content btm0">
+  <a href="#"><img src="images/shopHeader.jpg" alt="" class="pct100"></a>
+    <div class="p15 txt">
+      <p class="tc p15"><input type="button" value="点此申请开通" class="btn tc pct60 pt10 pb10 f16" onClick="javascript:location.href='#';"></p>
+      <h1 class="f16 tc line rel">经销商移动工作室开通申请说明：</h1>
+      <ol>
+      	<li><p>内部结构尊重外观设计，这是我们的坚持和追求。在内置音箱的结构设计上，我们更加慎重：既要考虑扬声器的发声效果，还必须兼顾坚果G1创新的圆形外观。</p></li>
+      	<li><p>
+            为了实现这个目标，我们创新的将对称分布的4只小口径、长冲程扬声器，垂直竖立在机身内壁四周，组成一套双腔体、四方位扬声系统。</p></li>
+      	<li><p>内部结构尊重外观设计，这是我们的坚持和追求。在内置音箱的结构设计上，我们更加慎重：既要考虑扬声器的发声效果，还必须兼顾坚果G1创新的圆形外观。</p></li>
+      	<li><p>
+            为了实现这个目标，我们创新的将对称分布的4只小口径、长冲程扬声器，垂直竖立在机身内壁四周，组成一套双腔体、四方位扬声系统。</p></li>
+      	<li><p>内部结构尊重外观设计，这是我们的坚持和追求。在内置音箱的结构设计上，我们更加慎重：既要考虑扬声器的发声效果，还必须兼顾坚果G1创新的圆形外观。</p></li>
+      </ol>
+    </div>
+  </div>
+</div>
+<script src="css/src/mobilebone.js"></script> 
+<script src="css/js/jquery.scrollUp.min.js"></script>
+<script src="css/js/js.js"></script>
+<script src="css/fastclick.js"></script>
+<script>
+FastClick.attach(document.body);
+</script>
+<script>
+Mobilebone.callback = function(page_in, page_out) {
+  //tabs
+	if(page_in.classList.contains("list")){
+		var eleAcive = document.querySelector(".etab .active");
+		if(eleAcive) eleAcive.classList.remove("active");
+		
+		var target= document.querySelectorAll(".etab a")[page_in.id.replace(/\D/g, "") - 1];
+	  if(target) target.classList.add("active");
+  }
+  //tabs
+}
+Mobilebone
+</script>
+</body>
+</html>
